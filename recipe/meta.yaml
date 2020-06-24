@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://www.gaia-gis.it/fossil/freexl/index
-  license: LGPL-2.1
+  license: LGPL-2.1-or-later
   license_file: COPYING
   summary: 'Extract valid data from within an Excel'
 
