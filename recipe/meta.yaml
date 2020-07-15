@@ -11,6 +11,7 @@ source:
     - makefile.vc.patch  # [win]
     - nmake.opt.patch  # [win]
     - freexl.c.patch  # [win]
+    - aarch64.patch
 
 build:
   number: 1002
@@ -22,6 +23,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - libiconv  # [win]
+    - make
 
 test:
   commands:
