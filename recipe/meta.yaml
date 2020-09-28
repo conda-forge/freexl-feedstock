@@ -10,7 +10,6 @@ source:
   patches:
     - patches/makefile.vc.patch
     - patches/nmake.opt.patch
-    - patches/freexl.c.patch  # [win]
     - patches/aarch64.patch
 
 build:
