@@ -8,10 +8,10 @@ source:
   url: http://www.gaia-gis.it/gaia-sins/freexl-{{ version }}.tar.gz
   sha256: 3de8b57a3d130cb2881ea52d3aa9ce1feedb1b57b7daa4eb37f751404f90fc22
   patches:
-    - makefile.vc.patch  # [win]
-    - nmake.opt.patch  # [win]
-    - freexl.c.patch  # [win]
-    - aarch64.patch
+    - patches/makefile.vc.patch
+    - patches/nmake.opt.patch
+    - patches/freexl.c.patch  # [win]
+    - patches/aarch64.patch
 
 build:
   number: 0
@@ -27,13 +27,11 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libfreexl.a  # [unix]
-    - conda inspect linkages -p ${PREFIX} $PKG_NAME  # [linux]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - test -f ${PREFIX}/lib/libfreexl.a  # [not win]
 
 about:
   home: https://www.gaia-gis.it/fossil/freexl/index
-  license: LGPL-2.1
+  license: MPL-1.1
   license_file: COPYING
   summary: Extract valid data from within an Excel
 
