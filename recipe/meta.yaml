@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: freexl
@@ -6,15 +6,14 @@ package:
 
 source:
   url: http://www.gaia-gis.it/gaia-sins/freexl-{{ version }}.tar.gz
-  sha256: 3dc9b150d218b0e280a3d6a41d93c1e45f4d7155829d75f1e5bf3e0b0de6750d
+  sha256: 3de8b57a3d130cb2881ea52d3aa9ce1feedb1b57b7daa4eb37f751404f90fc22
   patches:
-    - makefile.vc.patch  # [win]
-    - nmake.opt.patch  # [win]
-    - freexl.c.patch  # [win]
-    - aarch64.patch
+    - patches/makefile.vc.patch
+    - patches/nmake.opt.patch
+    - patches/aarch64.patch
 
 build:
-  number: 1002
+  number: 0
   run_exports:
     - {{ pin_subpackage('freexl') }}
 
@@ -27,15 +26,13 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libfreexl.a  # [unix]
-    - conda inspect linkages -p ${PREFIX} $PKG_NAME  # [linux]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - test -f ${PREFIX}/lib/libfreexl.a  # [not win]
 
 about:
   home: https://www.gaia-gis.it/fossil/freexl/index
-  license: LGPL-2.1
+  license: MPL-1.1
   license_file: COPYING
-  summary: 'Extract valid data from within an Excel'
+  summary: Extract valid data from within an Excel
 
 extra:
   recipe-maintainers:
