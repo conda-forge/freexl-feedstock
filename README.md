@@ -3,13 +3,11 @@ About freexl
 
 Home: https://www.gaia-gis.it/fossil/freexl/index
 
-Package license: LGPL-2.1
+Package license: MPL-1.1
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/freexl-feedstock/blob/master/LICENSE.txt)
 
 Summary: Extract valid data from within an Excel
-
-
 
 Current build status
 ====================
