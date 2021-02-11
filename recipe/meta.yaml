@@ -21,9 +21,9 @@ requirements:
   build:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
+    - make
   host:
     - libiconv  # [win]
-    - make
 
 test:
   commands:
