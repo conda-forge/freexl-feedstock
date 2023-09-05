@@ -1,5 +1,5 @@
---- freexl-1.0.6.orig/config.sub	2020-08-02 03:43:26.000000000 -0300
-+++ freexl-1.0.6/config.sub	2020-09-28 15:20:39.395769008 -0300
+--- freexl-2.0.0.orig/config.sub	2023-09-05 09:51:26.799607870 -0500
++++ freexl-2.0.0/config.sub	2023-09-05 09:55:19.043948039 -0500
 @@ -248,7 +248,7 @@
  	| alpha | alphaev[4-8] | alphaev56 | alphaev6[78] | alphapca5[67] \
  	| alpha64 | alpha64ev[4-8] | alpha64ev56 | alpha64ev6[78] | alpha64pca5[67] \

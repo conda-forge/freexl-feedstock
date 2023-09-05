@@ -1,7 +1,7 @@
---- freexl-1.0.6.orig/makefile.vc	2020-08-02 03:43:26.000000000 -0300
-+++ freexl-1.0.6/makefile.vc	2020-09-28 15:27:07.914770395 -0300
-@@ -7,7 +7,7 @@
- LIBOBJ	               =	freexl.obj
+--- freexl-2.0.0.orig/makefile.vc	2023-09-05 09:51:26.799607870 -0500
++++ freexl-2.0.0/makefile.vc	2023-09-05 09:52:33.743282413 -0500
+@@ -11,7 +11,7 @@
+ LIBOBJ	               =	$(CORE) $(XLSX) $(ODS)
  FREEXL_DLL	 	       =	freexl$(VERSION).dll
  
 -CFLAGS	=	/nologo -I. -Iheaders -IC:\OSGeo4W\include $(OPTFLAGS)
@@ -9,12 +9,18 @@
  
  default:	all
  
-@@ -25,7 +25,7 @@
+@@ -35,10 +35,10 @@
  freexl_i.lib:	$(LIBOBJ)
  	link /debug /dll /out:$(FREEXL_DLL) \
  		/implib:freexl_i.lib $(LIBOBJ) \
--		C:\OSGeo4w\lib\iconv.lib
-+		$(LIBRARY_LIB)\iconv.lib
+-		C:\OSGeo4W\lib\iconv.lib \
+-		C:\OSGeo4W\lib\libexpat.lib \
+-		C:\OSGeo4W\lib\libminizip.lib \
+-		C:\OSGeo4w\lib\zlib.lib
++		$(LIBRARY_LIB)\iconv.lib \
++		$(LIBRARY_LIB)\libexpat.lib \
++		$(LIBRARY_LIB)\libminizip.lib \
++		$(LIBRARY_LIB)\zlib.lib
  	if exist $(FREEXL_DLL).manifest mt -manifest \
  		$(FREEXL_DLL).manifest -outputresource:$(FREEXL_DLL);2 
  
