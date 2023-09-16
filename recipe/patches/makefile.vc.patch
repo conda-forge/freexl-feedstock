@@ -1,5 +1,5 @@
---- freexl-2.0.0.orig/makefile.vc	2023-09-05 09:51:26.799607870 -0500
-+++ freexl-2.0.0/makefile.vc	2023-09-05 09:52:33.743282413 -0500
+--- freexl-2.0.0.orig/makefile.vc	2023-09-15 20:57:15.072357562 -0500
++++ freexl-2.0.0/makefile.vc	2023-09-15 20:58:49.590348078 -0500
 @@ -11,7 +11,7 @@
  LIBOBJ	               =	$(CORE) $(XLSX) $(ODS)
  FREEXL_DLL	 	       =	freexl$(VERSION).dll
@@ -9,7 +9,7 @@
  
  default:	all
  
-@@ -35,10 +35,10 @@
+@@ -35,10 +35,9 @@
  freexl_i.lib:	$(LIBOBJ)
  	link /debug /dll /out:$(FREEXL_DLL) \
  		/implib:freexl_i.lib $(LIBOBJ) \
@@ -19,8 +19,7 @@
 -		C:\OSGeo4w\lib\zlib.lib
 +		$(LIBRARY_LIB)\iconv.lib \
 +		$(LIBRARY_LIB)\libexpat.lib \
-+		$(LIBRARY_LIB)\libminizip.lib \
-+		$(LIBRARY_LIB)\zlib.lib
++		$(LIBRARY_LIB)\libminizip.lib
  	if exist $(FREEXL_DLL).manifest mt -manifest \
  		$(FREEXL_DLL).manifest -outputresource:$(FREEXL_DLL);2 
  
