@@ -23,7 +23,9 @@ requirements:
     - {{ compiler('c') }}
     - make
   host:
-    - libiconv  # [win]
+    - expat
+    - libiconv
+    - minizip
 
 test:
   commands:
