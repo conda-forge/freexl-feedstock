@@ -1,5 +1,5 @@
---- freexl-1.0.6.orig/nmake.opt	2020-08-02 03:43:26.000000000 -0300
-+++ freexl-1.0.6/nmake.opt	2020-09-28 15:29:01.935086219 -0300
+--- freexl-2.0.0.orig/nmake.opt	2023-09-05 09:51:26.800607880 -0500
++++ freexl-2.0.0/nmake.opt	2023-09-05 09:53:50.439055227 -0500
 @@ -1,5 +1,5 @@
  # Directory tree where FreeXL will be installed.
 -INSTDIR=C:\OSGeo4W
