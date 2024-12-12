@@ -13,7 +13,7 @@ source:
     - patches/aarch64.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('freexl') }}
 
@@ -21,6 +21,7 @@ requirements:
   build:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make
   host:
     - expat

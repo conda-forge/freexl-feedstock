@@ -19,7 +19,7 @@
 -		C:\OSGeo4w\lib\zlib.lib
 +		$(LIBRARY_LIB)\iconv.lib \
 +		$(LIBRARY_LIB)\libexpat.lib \
-+		$(LIBRARY_LIB)\libminizip.lib
++		$(LIBRARY_LIB)\minizip.lib
  	if exist $(FREEXL_DLL).manifest mt -manifest \
  		$(FREEXL_DLL).manifest -outputresource:$(FREEXL_DLL);2 
  
